@@ -29,7 +29,8 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip2 1
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 2
 RUN pip install requests web3
-RUN npm install npm@latest -g  && npm install n --global && n stable
+#RUN npm install npm@latest -g  && npm install n --global && n stable
+RUN npm install
 
 RUN mkdir -p /deps/z3/ &&  wget https://github.com/Z3Prover/z3/archive/z3-4.5.0.zip -O /deps/z3/z3.zip && \
         cd /deps/z3/ && unzip /deps/z3/z3.zip && \
