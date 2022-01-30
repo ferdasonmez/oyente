@@ -1,6 +1,6 @@
 ARG ETHEREUM_VERSION=alltools-v1.7.3
 ARG SOLC_VERSION=0.8.10
-
+FROM node:13
 FROM ethereum/client-go:${ETHEREUM_VERSION} as geth
 FROM ethereum/solc:${SOLC_VERSION} as solc
 
