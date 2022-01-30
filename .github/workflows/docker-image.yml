@@ -1,5 +1,3 @@
-name: Checkout
-uses: actions/checkout@v2
 
       
 name: Build Docker Container Image
@@ -9,7 +7,10 @@ jobs:
     name: Build container
     runs-on: ubuntu-latest
     steps:
-      - name: Push to Docker Hub
+    name: Checkout
+      uses: actions/checkout@v2
+
+    name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           username: ${{ secrets.DOCKER_USER_NAME }}
