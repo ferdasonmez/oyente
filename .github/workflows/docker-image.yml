@@ -27,6 +27,6 @@ jobs:
         push: true
         username: ${{ secrets.DOCKER_USER_NAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: ferdaozdemir/oyente1
+        repository: ferdaozdemir/oyente
         dockerfile: ../../oyente/Dockerfile
-        tags: latest
+        tags: ferdaozdemir/oyente:latest
