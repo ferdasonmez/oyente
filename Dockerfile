@@ -4,7 +4,7 @@ FROM node:13
 FROM ethereum/client-go:${ETHEREUM_VERSION} as geth
 FROM ethereum/solc:${SOLC_VERSION} as solc
 
-FROM ubuntu:bionic as CLI
+FROM ubuntu:bionic as cli
 
 ARG NODEREPO=node_8.x
 
@@ -48,7 +48,7 @@ COPY . /oyente/
 WORKDIR /oyente/
 ENTRYPOINT ["python3", "/oyente/oyente/oyente.py"]
 
-FROM CLI as WEB
+FROM cli as WEB
 
 RUN wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz
 RUN tar -xzvf ruby-install-0.6.1.tar.gz
