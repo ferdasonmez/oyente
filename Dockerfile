@@ -29,7 +29,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip2 1
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 2
 RUN pip install requests web3
-RUN pip install crytic-compile
+RUN pip3 install crytic-compile
 #RUN npm install npm@latest -g  && npm install n --global && n stable
 RUN npm install
 
